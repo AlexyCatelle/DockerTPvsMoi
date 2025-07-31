@@ -1,6 +1,8 @@
 package dockertp.tp.models.dto;
 
 import dockertp.tp.enums.PlantType;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
@@ -8,7 +10,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Getter
@@ -25,5 +26,6 @@ public class PlantDTO {
     private Boolean isToxic;
     private Boolean isOwned;
 
+    @Enumerated(EnumType.STRING)
     private PlantType type;
 }

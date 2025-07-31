@@ -2,10 +2,7 @@ package dockertp.tp.models.entities;
 
 
 import dockertp.tp.enums.PlantType;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -25,8 +22,8 @@ public class Plant {
     private UUID id;
 
     private String name;
-    private PlantType type;
     private Boolean isToxic;
     private Boolean isOwned;
-
+    @Enumerated(EnumType.STRING)
+    private PlantType type;
 }

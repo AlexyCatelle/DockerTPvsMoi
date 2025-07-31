@@ -28,9 +28,10 @@ public class PlantMapper {
         return new Plant(
                 null,
                 plantDTO.getName(),
-                plantDTO.getType(),
                 plantDTO.getIsToxic(),
-                plantDTO.getIsOwned());
+                plantDTO.getIsOwned(),
+                plantDTO.getType())
+                ;
     }
 
     public static List<Plant> plantsToPlants (List<PlantDTO> plantDTOs){
