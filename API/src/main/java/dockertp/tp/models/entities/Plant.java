@@ -29,5 +29,4 @@ public class Plant {
     private Boolean isToxic;
     private Boolean isOwned;
 
-
 }
